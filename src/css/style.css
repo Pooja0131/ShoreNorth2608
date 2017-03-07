@@ -1,0 +1,264 @@
+/*navigation dots style*/
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+    background-color: red;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: #B81D18 !important;
+}
+
+
+/*carousel style*/
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 80%;
+    margin: auto;
+    font-family: 'Quattrocento', serif !important;
+}
+
+.carousel-control {
+    position: absolute;
+    width: 0 !important;
+    height: 60px;
+    margin-top: 250px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #000000 !important;
+    text-align: center;
+    border-radius: 23px;
+    opacity: 0.9;
+}
+
+.carousel-control.right {
+    right: 15px;
+    left: auto;
+    margin-right: 8px;
+}
+
+.carousel-control.left {
+    margin-left: 8px;
+}
+
+.carousel-caption h3 {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/*carousel pics transition effect*/
+
+
+/*http://stackoverflow.com/questions/19231678/how-can-i-change-the-sliding-animation-to-fade-in-out-with-transition-on-bootstr*/
+
+.carousel-fade .carousel-inner .item {
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+
+/*rotate image*/
+
+.rotateimg90 {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+/*basic styling*/
+
+#location {
+    float: left;
+    width: 50%;
+}
+
+#contactInfo {
+    width: 500px;
+    margin: auto;
+    font-size: 2em;
+    font-family: 'Quattrocento', serif;
+}
+
+#map {
+    height: 60%;
+    width: 40%;
+    background-color: grey;
+    float: right;
+    margin-right: 40px;
+}
+
+#pageHead {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    background: #B81D18;
+    color: white;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+
+/*header style*/
+
+#aptFeaturesHead, #bldgAmenitiesHead, #bldgLocationHead, #contactHead {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    background: #B81D18;
+    color: white;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+ul li {
+    text-align: left;
+    font-size: 1.5em;
+    font-family: 'Quattrocento', serif;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1200px) {
+    #map {
+        height: 70%;
+        margin-right: 100px;
+    }
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+    #map {
+        height: 70%;
+        margin-right: 20px;
+    }
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 999px) {
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        width: 92% !important;
+        height: 100% !important;
+    }
+    #map {
+        height: 70%;
+        margin-right: 20px;
+        margin-top: 50px;
+    }
+    #locationList {
+        margin-top: 20px;
+        font-size: .92em;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 749px) {
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    #map {
+        display: none;
+    }
+    #location {
+        width: 80%;
+    }
+    #locationList {
+        margin-top: 20px;
+        font-size: .8em;
+    }
+    #features ul li {
+        font-size: 1.3em;
+    }
+    #contactInfo {
+        width: 90%;
+        margin: auto;
+        font-size: 1.8em;
+    }
+    h1 {
+        font-size: 2.0em !important;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0;
+    }
+    .carousel-caption {
+        display: none;
+    }
+    #pageHead, #aptFeaturesHead, #bldgAmenitiesHead, #bldgLocationHead, #contactHead {
+        height: 35px;
+    }
+    h1 {
+        font-size: 1.5em !important;
+    }
+    #features {
+        width: 90%;
+    }
+    #features ul {
+        margin-top: 20px;
+    }
+    #features ul li {
+        font-size: 1.1em !important;
+    }
+    #locationList li {
+        font-size: 1.3em !important;
+    }
+    #map {
+        display: none;
+    }
+    #location {
+        width: 90%;
+    }
+    #locationList {
+        margin-top: 20px;
+        font-size: .9em;
+    }
+    #features ul li {
+        font-size: 1.3em;
+    }
+    #contactInfo {
+        width: 80%;
+        margin: auto;
+        font-size: 1.4em;
+    }
+}
